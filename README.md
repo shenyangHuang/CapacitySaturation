@@ -49,13 +49,9 @@ fraction -- ablation study (appendix)
 ## Dependencies: (recommend installation with Anaconda) 
 ```
 Python 3.6.7 :: Anaconda custom (64-bit)
-
 Keras 2.2.4
-
 Tensorflow 1.13.1 (gpu version)
-
 numpy 1.14.2
-
 pickle
 ```
 
