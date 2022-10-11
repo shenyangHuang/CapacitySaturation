@@ -13,18 +13,22 @@ Official python implementation for the paper: Understanding Capacity Saturation 
 
 3. adjust the related parameters in the script
 
-example: in CNAS_2class_resevoir
-
+*example: in CNAS_2class_resevoir
+  
+```
 mem_size = 1000
 
 classes = datasets.Incremental_partition("cifar100", 0.017, order, normalization="numerical")
+```
 
-** ex. Replicate capacity saturation experiment in Experiment Section **
+*example: Replicate capacity saturation experiment in Experiment Section 
 
+```
 CUDA_VISIBLE_DEVICES=0 python -u CNAS_small_incremental |& tee CNAS_small.txt
 
 CUDA_VISIBLE_DEVICES=0 python -u SA_small_2class |& tee SA_small.txt
-
+```
+  
 Note that each experiment will utilize one GPU (preferrably with large memory)
 
 .txt files stored the output of the experiment
@@ -41,6 +45,7 @@ fraction -- ablation study (appendix)
 
 
 ## Dependencies: (recommend installation with Anaconda) 
+```
 Python 3.6.7 :: Anaconda custom (64-bit)
 
 Keras 2.2.4
@@ -50,6 +55,7 @@ Tensorflow 1.13.1 (gpu version)
 numpy 1.14.2
 
 pickle
+```
 
 
 ## Citation:
