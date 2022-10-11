@@ -13,7 +13,7 @@ Official python implementation for the paper: Understanding Capacity Saturation 
 
 3. adjust the related parameters in the script
 
-*example: in CNAS_2class_resevoir
+* example: in CNAS_2class_resevoir
   
 ```
 mem_size = 1000
@@ -21,18 +21,20 @@ mem_size = 1000
 classes = datasets.Incremental_partition("cifar100", 0.017, order, normalization="numerical")
 ```
 
-*example: Replicate capacity saturation experiment in Experiment Section 
+* example: Replicate capacity saturation experiment in Experiment Section 
 
 ```
 CUDA_VISIBLE_DEVICES=0 python -u CNAS_small_incremental |& tee CNAS_small.txt
 
 CUDA_VISIBLE_DEVICES=0 python -u SA_small_2class |& tee SA_small.txt
 ```
+
   
 Note that each experiment will utilize one GPU (preferrably with large memory)
 
 .txt files stored the output of the experiment
 
+```
 small -- capacity saturation
 
 2class -- 2-class incremental learning
@@ -42,7 +44,7 @@ small -- capacity saturation
 mixed -- mixed class incremental learning (appendix)
 
 fraction -- ablation study (appendix)
-
+```
 
 ## Dependencies: (recommend installation with Anaconda) 
 ```
